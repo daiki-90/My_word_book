@@ -11,9 +11,9 @@
                     <th>name</th>
                     <th></th>
                 </tr>
-                <c:forEach var="employee" items="${employees}" varStatus="status">
+                <c:forEach var="user" items="${users}" varStatus="status">
                     <tr class="row${status.count % 2}">
-                        <td><c:out value="${user.code}" /></td>
+                        <td><c:out value="${user.id}" /></td>
                         <td><c:out value="${user.name}" /></td>
                         <td>
                             <a href="<c:url value='/users/show?id=${user.id}' />">""</a>
@@ -36,6 +36,6 @@
                 </c:choose>
             </c:forEach>
         </div>
-
+        <p><a href="<c:url value='/users/new' />">新規登録</a></p>
     </c:param>
 </c:import>
