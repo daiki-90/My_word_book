@@ -28,6 +28,6 @@
                 </c:choose>
             </c:forEach>
         </div>
-        <p><a href="<c:url value='/reports/new' />">新規作成</a></p>
+        <p><a href="<c:url value='/word_books/new' />">新規作成</a></p>
     </c:param>
 </c:import>
