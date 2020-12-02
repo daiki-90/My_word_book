@@ -24,6 +24,7 @@ import javax.persistence.Table;
             name = "getAllMyWordBooksCount",
             query = "SELECT COUNT(w) FROM WordBook AS w WHERE w.user = :user"
             ),
+
 })
 @Entity
 

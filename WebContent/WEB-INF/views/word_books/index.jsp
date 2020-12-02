@@ -8,16 +8,20 @@
             </div>
         </c:if>
         <h3>マイページ</h3>
-        <c:forEach var="wordBook" items="{wordBooks}">
-            <ul>
-                <li><c:out value="${wordbooks.name}" /></li>
-            </ul>
-        </c:forEach>
+          <table id="word_book_list">
+            <tbody>
 
-        <
+                <c:forEach var="wordBook" items="${wordBooks}" varStatus="status">
+                    <tr class="row${status.count % 2}">
+                        <td class="wordBook_title">${wordBook.title}</td>
+                        <td class="wordBook_action"><a href="<c:url value='/word_books/show?id=${wordBook.id}' />">※</a></td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
         <div id="pagination">
             （全 ${wordBooks_count} 件）<br />
-            <c:forEach var="i" begin="1" end="${((reports_count - 1) / 10) + 1}" step="1">
+            <c:forEach var="i" begin="1" end="${((wordBooks_count - 1) / 10) + 1}" step="1">
                 <c:choose>
                     <c:when test="${i == page}">
                         <c:out value="${i}" />&nbsp;

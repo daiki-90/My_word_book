@@ -4,7 +4,7 @@
     <c:param name="content">
         <h2>New Word Book 作成</h2>
 
-        <form method="POST" action="<c:url value='/wordBooks/create' />">
+        <form method="POST" action="<c:url value='/word_books/create' />">
             <c:import url="_form.jsp" />
         </form>
 
