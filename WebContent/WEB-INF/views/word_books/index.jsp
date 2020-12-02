@@ -13,8 +13,8 @@
 
                 <c:forEach var="wordBook" items="${wordBooks}" varStatus="status">
                     <tr class="row${status.count % 2}">
-                        <td class="wordBook_title">${wordBook.title}</td>
-                        <td class="wordBook_action"><a href="<c:url value='/word_books/show?id=${wordBook.id}' />">※</a></td>
+                        <td class="wordBook_title"><a href="<c:url value='/word_books/show?id=${wordBook.id}' />">${wordBook.title}</a></td>
+                        <td class="wordBook_action"><a href="<c:url value='/word_books/edit?id=${wordBook.id}' />">※</a></td>
                     </tr>
                 </c:forEach>
             </tbody>
