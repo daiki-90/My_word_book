@@ -17,7 +17,6 @@
                         <c:if test="${sessionScope.login_user.admin_flag == 1}">
                             <a href="<c:url value='/users/index' />">ユーザー管理</a>&nbsp;
                         </c:if>
-                        <a href="<c:url value='/reports/index' />">日報管理</a>&nbsp;
                     </c:if>
                 </div>
                 <c:if test="${sessionScope.login_user != null}">

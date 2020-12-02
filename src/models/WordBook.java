@@ -18,11 +18,11 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(
             name = "getAllMyWordBooks",
-            query = "SELECT w FROM WordBook AS w ORDER BY w.id DESC"
+            query = "SELECT w FROM WordBook AS w WHERE w.user = :user ORDER BY w.id DESC"
             ),
     @NamedQuery(
-            name = "getWordBookCount",
-            query = "SELECT COUNT(w) FROM WordBook AS w"
+            name = "getAllMyWordBooksCount",
+            query = "SELECT COUNT(w) FROM WordBook AS w WHERE w.user = :user"
             ),
 })
 @Entity
