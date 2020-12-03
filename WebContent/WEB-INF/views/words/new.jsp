@@ -3,7 +3,7 @@
 <c:import url="/WEB-INF/views/layout/app.jsp">
     <c:param name="content">
 
-        <form method="POST" action="<c:url value='/words/create' />">
+        <form method="POST" action="<c:url value='/words/create?id=${wordBook_id}' />">
             <c:import url="_form.jsp" />
         </form>
 

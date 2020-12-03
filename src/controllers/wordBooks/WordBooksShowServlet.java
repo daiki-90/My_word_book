@@ -61,6 +61,7 @@ public class WordBooksShowServlet extends HttpServlet {
         request.setAttribute("words", words);
         request.setAttribute("words_count", words_count);
         request.setAttribute("page", page);
+        request.getSession().removeAttribute("wordBook");
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/word_books/show.jsp");
         rd.forward(request, response);

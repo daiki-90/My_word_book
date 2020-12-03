@@ -11,7 +11,7 @@
 </c:if>
 
 <label for="title">ワード</label><br />
-<input type="text" name="title" value="${word.word}" />
+<input type="text" name="word" value="${word.word}" />
 <br /><br />
 
 <label for="content">意味</label><br />
