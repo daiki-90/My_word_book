@@ -20,7 +20,7 @@
                     <tbody>
                         <c:forEach var="word" items="${words}" varStatus="status">
                             <tr class="row${status.count % 2}">
-                                <td class="report_title"><a href="<c:url value='/reports/show?id=${report.id}' />">${word.word}</a></td>
+                                <td class="word_title"><a href="<c:url value='/words/show?id=${word.id}' />">${word.word}</a></td>
                             </tr>
                         </c:forEach>
                     </tbody>

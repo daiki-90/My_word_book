@@ -60,6 +60,8 @@ public class MyPageIndexServlet extends HttpServlet {
         request.setAttribute("wordBooks", wordBooks);
         request.setAttribute("wordBooks_count", wordBooks_count);
         request.setAttribute("page", page);
+        request.getSession().removeAttribute("wordBook");
+        request.getSession().removeAttribute("wordBook_id");
 
         if(request.getSession().getAttribute("flush") != null) {
             request.setAttribute("flush", request.getSession().getAttribute("flush"));

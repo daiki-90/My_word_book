@@ -7,6 +7,6 @@
             <c:import url="_form.jsp" />
         </form>
 
-        <p><a href="<c:url value='/word_books/show?id=${wordBook_id}' />">一覧</a></p>
+        <p><a href="<c:url value='/word_books/show?id=${sessionScope.wordBook_id}' />">一覧</a></p>
     </c:param>
 </c:import>

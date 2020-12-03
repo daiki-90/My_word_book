@@ -36,6 +36,7 @@ public class WordBooksShowServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = DBUtil.createEntityManager();
 
+        Integer wordBook_id = Integer.parseInt(request.getParameter("id"));
         WordBook w = em.find(WordBook.class, Integer.parseInt(request.getParameter("id")));
 
         int page;
@@ -61,7 +62,7 @@ public class WordBooksShowServlet extends HttpServlet {
         request.setAttribute("words", words);
         request.setAttribute("words_count", words_count);
         request.setAttribute("page", page);
-        request.getSession().removeAttribute("wordBook");
+        request.getSession().setAttribute("wordBook_id", wordBook_id);
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/word_books/show.jsp");
         rd.forward(request, response);
