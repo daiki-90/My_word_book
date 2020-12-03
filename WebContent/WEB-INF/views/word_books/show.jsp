@@ -6,7 +6,7 @@
         <c:choose>
             <c:when test="${wordBook != null}">
                 <h2><c:out value="${wordBook.title}"></c:out></h2>
-                <p><a href="<c:url value='/words/new' />">word 追加</a></p>
+                <p><a href="<c:url value='/words/new?id=${wordBook.id}' />">word 追加</a></p>
                 <table>
                     <tbody>
                         <tr>
