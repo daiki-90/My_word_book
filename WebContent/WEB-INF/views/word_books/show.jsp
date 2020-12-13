@@ -6,12 +6,13 @@
         <c:choose>
             <c:when test="${wordBook != null}">
                 <h2><c:out value="${wordBook.title}"></c:out></h2>
-                <p><a href="<c:url value='/words/new?id=${wordBook.id}' />">word 追加</a></p>
+                <p><a href="<c:url value='/words/new?id=${wordBook.id}' />">word 追加 <i class="fas fa-pencil-alt"></i></a></p>
+                <p><a href="<c:url value='/words/random?id=${wordBook.id}' />">ランダム表示 <i class="fas fa-random"></i></a></p>
                 <table>
                     <tbody>
                         <tr>
                             <td>
-                                <pre><c:out value="${wordBook.comment}" /></pre>
+                                <pre>[<c:out value="${wordBook.comment}" />]</pre>
                             </td>
                         </tr>
                     </tbody>
@@ -20,7 +21,7 @@
                     <tbody>
                         <c:forEach var="word" items="${words}" varStatus="status">
                             <tr class="row${status.count % 2}">
-                                <td class="word_title"><a href="<c:url value='/words/show?id=${word.id}' />">${word.word}</a></td>
+                                <td class="word_title"><a href="<c:url value='/words/show?id=${word.id}' />">・ ${word.word}</a></td>
                             </tr>
                         </c:forEach>
                     </tbody>

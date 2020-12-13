@@ -1,0 +1,121 @@
+@CHARSET "UTF-8";
+
+body {
+    color: #333333;
+    font-family: "Hiragino Kaku Gothic Pro",Meiryo,"MS PGothic",Helvetica,Arial,sans-serif;
+}
+
+#header  {
+    width: 100%;
+    height: 50px;
+    background-color: #cccccc;
+}
+
+#header_menu {
+    width: 57%;
+    padding-top: 2px;
+    padding-left: 3%;
+    display: inline-block;
+}
+
+#user_name {
+    color: #eeeeee;
+    padding-top: 7px;
+    padding-right: 3%;
+    float: right;
+    display: inline-block;
+}
+
+#header a {
+    color: #eeeeee;
+}
+
+#header h1 {
+    color: #eeeeee;
+    display: inline;
+    font-size: 20px;
+}
+
+table {
+    table-layout:fixed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+th {
+    padding: 10px;
+    font-weight: bold;
+}
+
+td {
+    padding: 10px;
+}
+
+button {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+table#user_list th {
+    width: 40%;
+    padding:10px 2%;
+    font-weight: bold;
+    text-align: center;
+}
+
+table#user_list td {
+    padding: 10px 2%;
+    text-align: center;
+}
+
+#registered_person {
+    font-size: 20px;
+    padding: 10px 10px 50px 10px;
+    text-align: center;
+}
+
+#user_id {
+    font-size: 20px;
+    padding:10px 10px 50px 10px;
+    text-align: center;
+}
+
+#pagination {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-top: 30px 0 10px 0;
+    display: block;
+}
+
+#form {
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    padding:10px 10px 50px 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#flush_success {
+    text-align: center;
+    color: #4169E1;
+}
+
+table#word_book_list td {
+    font-size: 20px;
+}
+
+#word_contents {
+    padding: 50px 0 80px 0;
+    font-size: 20px;
+}
+
+#next {
+    padding-bottom: 80px;
+}

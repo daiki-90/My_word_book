@@ -10,21 +10,23 @@
 
     </div>
 </c:if>
-<label for="wordBook_date">日付</label><br />
-<input type="date" name="wordBook_date" value="<fmt:formatDate value='${wordBook.wordBook_date}' pattern='yyyy-MM-dd' />" />
-<br /><br />
+<div id="form">
+    <label for="wordBook_date">日付</label><br />
+    <input type="date" name="wordBook_date" value="<fmt:formatDate value='${wordBook.wordBook_date}' pattern='yyyy-MM-dd' />" />
+    <br /><br />
 
-<label for="name">名前</label><br />
-<c:out value="${sessionScope.login_user.name}" />
-<br /><br />
+    <label for="name">名前</label><br />
+    <c:out value="${sessionScope.login_user.name}" />
+    <br /><br />
 
-<label for="title">タイトル</label><br />
-<input type="text" name="title" value="${wordBook.title}" />
-<br /><br />
+    <label for="title">タイトル</label><br />
+    <input type="text" name="title" value="${wordBook.title}" />
+    <br /><br />
 
-<label for="content">内容</label><br />
-<textarea name="comment" rows="10" cols="50">${wordBook.comment}</textarea>
-<br /><br />
+    <label for="content">内容</label><br />
+    <textarea name="comment" rows="10" cols="50">${wordBook.comment}</textarea>
+    <br /><br />
 
-<input type="hidden" name="_token" value="${_token}" />
-<button type="submit">作成</button>
+    <input type="hidden" name="_token" value="${_token}" />
+    <button type="submit">作成</button>
+</div>

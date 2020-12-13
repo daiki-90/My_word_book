@@ -7,17 +7,16 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h2>登録者</h2>
-        <table id="employee_list">
+        <div id="registered_person">
+            <h2>登録者</h2>
+        </div>
+        <table id="user_list">
             <tbody>
                 <tr>
-                    <th>#</th>
                     <th>name</th>
-                    <th></th>
                 </tr>
                 <c:forEach var="user" items="${users}" varStatus="status">
                     <tr class="row${status.count % 2}">
-                        <td><c:out value="${user.id}" /></td>
                         <td><c:out value="${user.name}" /></td>
                         <td>
                             <a href="<c:url value='/users/show?id=${user.id}' />">※</a>

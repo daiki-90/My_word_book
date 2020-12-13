@@ -4,17 +4,18 @@
     <c:param name="content">
         <c:choose>
             <c:when test="${user != null}">
-                <h2>id : ${user.id} </h2>
-
+                <div id="user_id">
+                    <h2>id : ${user.id} </h2>
+                </div>
                 <table>
                     <tbody>
 
                         <tr>
-                            <th>氏名</th>
+                            <th>name</th>
                             <td><c:out value="${user.name}" /></td>
                         </tr>
                         <tr>
-                            <th>権限</th>
+                            <th>authority</th>
                             <td>
                                 <c:choose>
                                     <c:when test="${user.admin_flag == 1}">管理者</c:when>

@@ -9,14 +9,15 @@
 
     </div>
 </c:if>
+<div id="form">
+    <label for="title">ワード</label><br />
+    <input type="text" name="word" value="${word.word}" />
+    <br /><br />
 
-<label for="title">ワード</label><br />
-<input type="text" name="word" value="${word.word}" />
-<br /><br />
+    <label for="content">意味</label><br />
+    <textarea name="content" rows="10" cols="50">${word.content}</textarea>
+    <br /><br />
 
-<label for="content">意味</label><br />
-<textarea name="content" rows="10" cols="50">${word.content}</textarea>
-<br /><br />
-
-<input type="hidden" name="_token" value="${_token}" />
-<button type="submit">追加</button>
+    <input type="hidden" name="_token" value="${_token}" />
+    <button type="submit">追加</button>
+</div>

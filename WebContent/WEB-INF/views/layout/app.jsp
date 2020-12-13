@@ -6,16 +6,17 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="<c:url value='/css/reset.css' />">
         <link rel="stylesheet" href="<c:url value='/css/style.css' />">
+        <script src="https://kit.fontawesome.com/8db2a6728b.js" crossorigin="anonymous"></script>
         <title>My Word Book</title>
     </head>
     <body>
         <div id="wrapper">
             <div id="header">
+                <h1>My Word Book </h1>
                 <div id="header_menu">
-                    <h1>My Word Book </h1>
                     <c:if test="${sessionScope.login_user != null}">
                         <c:if test="${sessionScope.login_user.admin_flag == 1}">
-                            <a href="<c:url value='/users/index' />">ユーザー管理</a>&nbsp;
+                            <a href="<c:url value='/users/index' />">ユーザー管理 <i class="fas fa-cog"></i></a>&nbsp;
                         </c:if>
                     </c:if>
                 </div>

@@ -13,19 +13,21 @@
             </div>
         </c:if>
         <h2>ログイン</h2>
-        <form method="POST" action="<c:url value='/login' />">
-            <label for="name">name</label><br />
-            <input type="text" name="name" value="${name}" />
-            <br /><br />
+        <div id="form">
+            <form method="POST" action="<c:url value='/login' />">
+                <label for="name">name</label><br />
+                <input type="text" name="name" value="${name}" />
+                <br /><br />
 
-            <label for="password">password</label><br />
-            <input type="password" name="password" />
-            <br /><br />
+                <label for="password">password</label><br />
+                <input type="password" name="password" />
+                <br /><br />
 
-            <input type="hidden" name="_token" value="${_token}" />
-            <button type="submit">ログイン</button>
-        </form>
-        <p><a href="c;url value='users/new' />">新規登録</a></p>
+                <input type="hidden" name="_token" value="${_token}" />
+                <button type="submit">ログイン</button>
+            </form>
+        </div>
+        <p><a href="<c:url value='users/new' />">新規登録</a></p>
 
     </c:param>
 </c:import>

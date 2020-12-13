@@ -7,14 +7,13 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h3>マイページ</h3>
+        <h2>マイ単語帳 <i class="fas fa-book"></i></h2>
           <table id="word_book_list">
             <tbody>
-
                 <c:forEach var="wordBook" items="${wordBooks}" varStatus="status">
                     <tr class="row${status.count % 2}">
-                        <td class="wordBook_title"><a href="<c:url value='/word_books/show?id=${wordBook.id}' />">${wordBook.title}</a></td>
-                        <td class="wordBook_action"><a href="<c:url value='/word_books/edit?id=${wordBook.id}' />">※</a></td>
+                        <td class="wordBook_title"><a href="<c:url value='/word_books/show?id=${wordBook.id}' />"><i class="far fa-folder"></i> ${wordBook.title}</a></td>
+                        <td class="wordBook_action"><a href="<c:url value='/word_books/edit?id=${wordBook.id}' />"><i class="far fa-edit"></i></a></td>
                     </tr>
                 </c:forEach>
             </tbody>
