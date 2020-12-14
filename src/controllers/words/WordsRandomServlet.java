@@ -53,7 +53,7 @@ public class WordsRandomServlet extends HttpServlet {
 
         request.setAttribute("word", word);
 
-        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/words_random/word.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/words_random/contents.jsp");
         rd.forward(request, response);
 
 
