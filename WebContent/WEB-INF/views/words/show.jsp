@@ -17,6 +17,7 @@
                     </tbody>
                 </table>
                     <p><a href="<c:url value="/words/edit?id=${word.id}" />">編集</a></p>
+                    <br><br>
             </c:when>
             <c:otherwise>
                 <h2>お探しのデータは見つかりませんでした。</h2>

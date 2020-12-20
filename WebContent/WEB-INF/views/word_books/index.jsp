@@ -27,10 +27,12 @@
                     </c:when>
                     <c:otherwise>
                         <a href="<c:url value='/?page=${i}' />"><c:out value="${i}" /></a>&nbsp;
+                        <br />
                     </c:otherwise>
                 </c:choose>
             </c:forEach>
         </div>
         <p><a href="<c:url value='/word_books/new' />">新規作成</a></p>
+        <br><br>
     </c:param>
 </c:import>

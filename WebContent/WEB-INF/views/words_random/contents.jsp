@@ -9,7 +9,7 @@
                 </div>
                 <div id="word-acd">
                     <input id="acd-check1" class="acd-check" type="checkbox">
-                    <label class="acd-label" for="acd-check1">意味(クリック) <i class="far fa-hand-point-up"></i></label>
+                    <label class="acd-label" for="acd-check1">解答を表示  <i class="far fa-hand-point-up"></i></label>
                     <div class="acd-content">
                         <pre><c:out value="${word.content}" /></pre>
                     </div>

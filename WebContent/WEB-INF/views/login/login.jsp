@@ -25,6 +25,16 @@
 
                 <input type="hidden" name="_token" value="${_token}" />
                 <button type="submit">ログイン</button>
+                <br><br>
+            </form>
+            <form method="POST" action="<c:url value='/login' />">
+                <input type="hidden" name="name" value="ゲストユーザー" />
+
+                <input type="hidden" name="password" value="gesuto" />
+
+                <input type="hidden" name="_token" value="${_token}" />
+                <button type="submit">ゲストログイン</button>
+                <br><br>
             </form>
         </div>
         <p><a href="<c:url value='users/new' />">新規登録</a></p>

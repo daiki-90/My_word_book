@@ -8,10 +8,11 @@
                 <form method="POST" action="<c:url value='/word_books/update' />">
                     <c:import url="_form.jsp" />
                 </form>
-                 <p><a href="#" onclick="confirmDestroy();">このWord Bookを削除</a></p>
+                 <p><a href="#" onclick="confirmDestroy();">この単語帳を削除</a></p>
                 <form method="POST" action="<c:url value='/word_books/destroy' />">
                     <input type="hidden" name="_token" value="${_token}" />
                 </form>
+                <br />
                 <script>
                     function confirmDestroy() {
                         if(confirm("本当に削除してよろしいですか？")) {
@@ -25,6 +26,7 @@
             </c:otherwise>
         </c:choose>
 
-        <p><a href="<c:url value='/' />">マイページ</a></p>
+        <p><a href="<c:url value='/' />">単語帳一覧</a></p>
+        <br />
     </c:param>
 </c:import>

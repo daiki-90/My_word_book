@@ -126,6 +126,9 @@ table#word_book_list td {
     margin-right: auto;
     margin-bottom: 50px;
 }
+.acd-label:hover {
+    cursor: hand;
+}
 
 .acd-check{
   display: none;
@@ -176,3 +179,8 @@ table#word_book_list td {
 #word-title {
     font-size: 40px;
 }
+
+#login_user_name {
+    font-weight: bold;
+}
+

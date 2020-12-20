@@ -12,6 +12,7 @@
                 <form method="POST" action="<c:url value='/words/destroy' />">
                     <input type="hidden" name="_token" value="${_token}" />
                 </form>
+                <br />
                 <script>
                     function confirmDestroy() {
                         if(confirm("本当に削除してよろしいですか？")) {
@@ -26,5 +27,6 @@
         </c:choose>
 
         <p><a href="<c:url value='/word_books/show?id=${sessionScope.wordBook_id}' />">一覧</a></p>
+        <br />
     </c:param>
 </c:import>

@@ -6,8 +6,7 @@
         <c:choose>
             <c:when test="${wordBook != null}">
                 <h2><c:out value="${wordBook.title}"></c:out></h2>
-                <p><a href="<c:url value='/words/new?id=${wordBook.id}' />">単語 追加 <i class="fas fa-pencil-alt"></i></a></p>
-                <p><a href="<c:url value='/words/random?id=${wordBook.id}' />">ランダム表示 <i class="fas fa-random"></i></a></p>
+
                 <table>
                     <tbody>
                         <tr>
@@ -17,6 +16,10 @@
                         </tr>
                     </tbody>
                 </table>
+                <p><a href="<c:url value='/words/new?id=${wordBook.id}' />">単語 追加 <i class="fas fa-pencil-alt"></i></a></p>
+                <br>
+                <p><a href="<c:url value='/words/random?id=${wordBook.id}' />">ランダム表示 <i class="fas fa-random"></i></a></p>
+                <br>
                 <table id="word_list">
                     <tbody>
                         <c:forEach var="word" items="${words}" varStatus="status">
@@ -45,6 +48,6 @@
             </c:otherwise>
         </c:choose>
 
-        <p><a href="<c:url value="/" />">マイページ</a></p>
+        <p><a href="<c:url value="/" />">単語帳一覧</a></p>
     </c:param>
 </c:import>

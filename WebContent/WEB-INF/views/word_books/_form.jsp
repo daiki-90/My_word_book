@@ -16,7 +16,9 @@
     <br /><br />
 
     <label for="name">名前</label><br />
-    <c:out value="${sessionScope.login_user.name}" />
+    <div id="login_user_name">
+        <c:out value="${sessionScope.login_user.name}" />
+    </div>
     <br /><br />
 
     <label for="title">タイトル</label><br />
@@ -29,4 +31,5 @@
 
     <input type="hidden" name="_token" value="${_token}" />
     <button type="submit">作成</button>
+    <br />
 </div>

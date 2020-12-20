@@ -19,7 +19,7 @@
                     <tr class="row${status.count % 2}">
                         <td><c:out value="${user.name}" /></td>
                         <td>
-                            <a href="<c:url value='/users/show?id=${user.id}' />">※</a>
+                            <a href="<c:url value='/users/show?id=${user.id}' />"><i class="far fa-edit"></i></a>
                         </td>
                     </tr>
                 </c:forEach>
