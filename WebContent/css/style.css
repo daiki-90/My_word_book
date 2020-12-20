@@ -126,8 +126,8 @@ table#word_book_list td {
     margin-right: auto;
     margin-bottom: 50px;
 }
-.acd-label:hover {
-    cursor: hand;
+label:hover {
+    cursor: pointer;
 }
 
 .acd-check{
@@ -184,3 +184,11 @@ table#word_book_list td {
     font-weight: bold;
 }
 
+ul {
+    color: blue;
+}
+
+li {
+    display: inline-block;
+    magin: 30px;
+}

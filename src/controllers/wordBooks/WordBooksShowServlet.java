@@ -47,8 +47,8 @@ public class WordBooksShowServlet extends HttpServlet {
         }
         List<Word> words = em.createNamedQuery("getAllWords", Word.class)
                                   .setParameter("wordBook", w)
-                                  .setFirstResult(15 * (page - 1))
-                                  .setMaxResults(15)
+                                  .setFirstResult(30 * (page - 1))
+                                  .setMaxResults(30)
                                   .getResultList();
 
         long words_count = (long)em.createNamedQuery("getAllWordsCount", Long.class)

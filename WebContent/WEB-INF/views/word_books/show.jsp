@@ -20,18 +20,14 @@
                 <br>
                 <p><a href="<c:url value='/words/random?id=${wordBook.id}' />">ランダム表示 <i class="fas fa-random"></i></a></p>
                 <br>
-                <table id="word_list">
-                    <tbody>
-                        <c:forEach var="word" items="${words}" varStatus="status">
-                            <tr class="row${status.count % 2}">
-                                <td class="word_title"><a href="<c:url value='/words/show?id=${word.id}' />">・ ${word.word}</a></td>
-                            </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
+                <ul>
+                    <c:forEach var="word" items="${words}" varStatus="status">
+                        <li><a href="<c:url value='/words/show?id=${word.id}' />">&nbsp; ${word.word} &nbsp;</a></li>
+                    </c:forEach>
+                </ul>
                 <div id="pagination">
                     （全 ${words_count} 件）<br />
-                    <c:forEach var="i" begin="1" end="${((words_count - 1) / 15) + 1}" step="1">
+                    <c:forEach var="i" begin="1" end="${((words_count - 1) / 30) + 1}" step="1">
                         <c:choose>
                             <c:when test="${i == page}">
                                 <c:out value="${i}" />&nbsp;
